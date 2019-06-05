@@ -1,0 +1,14 @@
+{
+    "name": "nielslange/biasa",
+    "version": "1.0.0",
+    "description": "",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "Niels Lange",
+            "email": "info@nielslange.de"
+        }
+    ],
+    "license": "GPL-2.0-or-later",
+    "require": {}
+}
