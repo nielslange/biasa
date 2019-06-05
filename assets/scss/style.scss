@@ -1,0 +1,100 @@
+/*!
+Theme Name: Biasa
+Theme URI:
+Author: Niels Lange
+Author URI: https://nielslange.de/
+Description: Biasa is a handcrafted, lightweight theme for the average nerd.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, one-column, two-columns, left-sidebar, right-sidebar, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready,
+Text Domain: biasa
+*/
+
+/*--------------------------------------------------------------
+TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Base Rules
+# Layout Rules
+# Module Rules
+# State Rules
+# Theme Rules
+# Changing State
+--------------------------------------------------------------*/
+
+/* # Base Rules ----------------------------------------------*/
+
+body {
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", Dotum, sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 1em;
+}
+
+.alignleft {
+  text-align: left;
+}
+
+.alignright {
+  text-align: right;
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+/* # Layout Rules --------------------------------------------*/
+
+header {
+  background: #3a6674;
+}
+
+#header_title {
+  background: green;
+}
+
+#header_menu {
+  background: red;
+}
+
+section {
+  background: blue;
+  padding: 1em;
+}
+
+section article {
+  max-width: 1200px;
+  margin: auto;
+}
+
+footer {
+  background: purple;
+}
+
+#footer_credits {
+  background: pink;
+}
+
+#footer_menu {
+  background: beige;
+}
+
+/* # Module Rules --------------------------------------------*/
+
+/* # State Rules ---------------------------------------------*/
+
+/* # Theme Rules ---------------------------------------------*/
+
+/* # Changing State ------------------------------------------*/

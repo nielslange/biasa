@@ -31,7 +31,7 @@
 	</div><!-- #header_title -->
 
 	<div id="header_menu" class="column alignright">
-		<?php wp_nav_menu( array( 'theme_location' => 'header_menu' ); ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'header_menu' )); ?>
 	</div><!-- #header_menu -->
 
 </header><!-- header -->

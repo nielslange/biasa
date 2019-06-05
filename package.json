@@ -2,5 +2,15 @@
 	"name": "nielslange/biasa",
 	"version": "1.0.0",
 	"dependencies": {
+		"gulp": "^4.0.2"
+	},
+	"devDependencies": {
+		"browser-sync": "^2.26.5",
+		"gulp-autoprefixer": "^6.1.0",
+		"gulp-cached": "^1.1.1",
+		"gulp-plumber": "^1.2.1",
+		"gulp-sass": "^4.0.2",
+		"gulp-sass-lint": "^1.4.0",
+		"gulp-sourcemaps": "^2.6.5"
 	}
 }
