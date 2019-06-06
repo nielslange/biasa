@@ -1,11 +1,11 @@
-**Theme Name:** Biasa
-**Theme URI:** https://github.com/nielslange/biasa/
-**Contributors:** Niels Lange, Alexander High
-**Requires at least:** WordPress 3.0
-**Version:** 1.0
+**Theme Name:** Biasa  
+**Theme URI:** https://github.com/nielslange/biasa/  
+**Contributors:** Niels Lange, Alexander High  
+**Requires at least:** WordPress 3.0  
+**Version:** 1.0  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
-**Tags:** one-column, custom-menu, featured-images, sticky-post, threaded-comments, translation-ready
+**Tags:** one-column, custom-menu, featured-images, sticky-post, threaded-comments, translation-ready  
 
 ## Description
 
