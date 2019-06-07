@@ -27,9 +27,13 @@ GNU General Public License for more details.
 
 Biasa bundles the following third-party resources:
 
-normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
-**License:** MIT
+normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal  
+License: MIT  
 Source: https://necolas.github.io/normalize.css/
+
+color-studio, Copyright 2015-2018 Automattic  
+License: GPL2  
+Source: https://github.com/Automattic/color-studio
 
 ## Changelog
 
