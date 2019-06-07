@@ -14,6 +14,7 @@ Text Domain: biasa
 /*--------------------------------------------------------------
 TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Assets
 # Base Rules
 # Layout Rules
 # Module Rules
@@ -22,10 +23,23 @@ TABLE OF CONTENTS:
 # Changing State
 --------------------------------------------------------------*/
 
+/* # Assets --------------------------------------------------*/
+
+@import "_color-variables";
+
 /* # Base Rules ----------------------------------------------*/
 
 body {
   font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", Dotum, sans-serif;
+  color: $muriel-gray-700;
+}
+
+a {
+  color: $muriel-blue-500;
+}
+
+a:focus, a:hover {
+  color: $muriel-blue-600;
 }
 
 .row {
@@ -58,19 +72,19 @@ body {
 /* # Layout Rules --------------------------------------------*/
 
 header {
-  background: #3a6674;
+  background: $muriel-gray-0;
 }
 
 #header_title {
-  background: green;
+  background: $muriel-gray-0;
 }
 
 #header_menu {
-  background: red;
+  background: $muriel-gray-0;
 }
 
 section {
-  background: blue;
+  background: $muriel-gray-50;
   padding: 1em;
 }
 
@@ -80,15 +94,15 @@ section article {
 }
 
 footer {
-  background: purple;
+  background: $muriel-gray-0;
 }
 
 #footer_credits {
-  background: pink;
+  background: $muriel-gray-0;
 }
 
 #footer_menu {
-  background: beige;
+  background: $muriel-gray-0;
 }
 
 /* # Module Rules --------------------------------------------*/
