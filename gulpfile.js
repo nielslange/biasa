@@ -4,24 +4,26 @@
 // $ npm install --global gulp-cli
 // $ npm install
 const {src, dest, watch, series, parallel} = require('gulp');
-const browsersync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const sasslint = require('gulp-sass-lint');
 const cache = require('gulp-cached');
+const notify = require("gulp-notify");
+
 // npm install -save browsersync gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-plumber gulp-sass-lint gulp-cached
 
 // Compile CSS from Sass.
 function buildStyles() {
-    return src('assets/scss/*.scss', 'assets/scss/**/*.scss')
-        .pipe(plumber()) // Global error listener.
-        .pipe(sourcemaps.init({loadMaps: false}))
-        .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7']))
-        .pipe(sourcemaps.write(false))
-        .pipe(dest('../biasa'))
+    return src( 'assets/scss/*.scss', 'assets/scss/**/*.scss' )
+        .pipe( plumber() )
+        .pipe( sourcemaps.init({loadMaps: false}) )
+        .pipe( sass({outputStyle: 'compressed'}) )
+        .pipe( autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7']) )
+        .pipe( sourcemaps.write(false) )
+        .pipe( dest('../biasa') )
+        .pipe( notify( { message: '\n\n✅  SCSS file successfully compiled\n', onLast: true } ) );
 }
 
 // Watch changes on all *.scss files and trigger buildStyles() at the end.
@@ -35,17 +37,17 @@ function watchFiles() {
 
 // Init Sass linter.
 function sassLint() {
-    return src(['assets/scss/*.scss', 'assets/scss/**/*.scss'])
-        .pipe(cache('sasslint'))
-        .pipe(sasslint({
+    return src( ['assets/scss/*.scss', 'assets/scss/**/*.scss'] )
+        .pipe( cache('sasslint') )
+        .pipe( sasslint({
             configFile: '.sass-lint.yml'
-        }))
-        .pipe(sasslint.format())
-        .pipe(sasslint.failOnError());
+        } ))
+        .pipe( sasslint.format() )
+        .pipe( sasslint.failOnError() );
 }
 
 // Export commands.
-exports.default = parallel(sassLint, watchFiles); // $ gulp
+exports.default = parallel( sassLint, watchFiles ); // $ gulp
 exports.sass = buildStyles; // $ gulp sass
 exports.watch = watchFiles; // $ gulp watch
 exports.build = series(buildStyles); // $ gulp build
