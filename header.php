@@ -27,13 +27,23 @@
 <header class="row">
 
 	<div id="header_title" class="column">
-		<h2><?php bloginfo(); ?></h2>
+		<?php printf( '<h2><a href="/" title="%1$s">%1$s</a></h2>', get_bloginfo() ); ?>
 	</div><!-- #header_title -->
 
 	<div id="header_menu" class="column alignright">
-		<?php wp_nav_menu( array( 'theme_location' => 'header_menu' )); ?>
+		<?php if ( has_nav_menu( 'header_menu' ) ) : ?>
+			<nav class="nav header-nav" aria-label="<?php esc_attr_e( 'Footer Menu', 'biasa' ); ?>">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'header_menu',
+						'menu_class'     => 'header-menu',
+						'depth'          => -1,
+					)
+				);
+				?>
+			</nav><!-- .header-nav -->
+		<?php endif; ?>
 	</div><!-- #header_menu -->
 
 </header><!-- header -->
-
-<section>
